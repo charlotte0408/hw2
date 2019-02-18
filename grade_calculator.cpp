@@ -10,7 +10,7 @@ grade_calculator::grade_calculator(QWidget *parent) :
     connect(ui->radioButton,SIGNAL(clicked()),this,SLOT(schemaA()));
     connect(ui->radioButton_2,SIGNAL(clicked()),this,SLOT(schemaB()));
     connect(ui->pushButton,SIGNAL(clicked()),this,SLOT(display()));
-
+    connect(ui->comboBox,SIGNAL(currentIndexChanged(int)),this,SLOT(course(int)));
 }
 
 grade_calculator::~grade_calculator()
@@ -51,6 +51,13 @@ void grade_calculator::schemaB()
 
 void grade_calculator::display()
 {
-    ui->label->setText(QString::number(score));
+    ui->label->setText(QString::number(course_num));
 }
 
+void grade_calculator::course(int index)
+{
+    if (index != -1)
+    {
+        course_num = index;
+    }
+}

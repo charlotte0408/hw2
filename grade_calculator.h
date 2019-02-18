@@ -19,10 +19,12 @@ public slots:
     void schemaA();
     void schemaB();
     void display();
+    void course(int index);
 
 private:
     Ui::grade_calculator *ui;
     double score;
+    int course_num;
 };
 
 #endif // GRADE_CALCULATOR_H
