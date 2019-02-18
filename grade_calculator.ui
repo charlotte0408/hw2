@@ -62,11 +62,6 @@
     </property>
     <item>
      <property name="text">
-      <string>Pic 10A</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
       <string>Pic 10B</string>
      </property>
     </item>

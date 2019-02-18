@@ -25,10 +25,11 @@ void grade_calculator::schemaA()
     int hw3 = ui->spinBox_3->value();
     int hw4 = ui->spinBox_4->value();
     int hw5 = ui->spinBox_5->value();
-    int mid1 = ui->spinBox_8->value();
+    int mid1 = ui->spinBox_10->value();
     int mid2 = ui->spinBox_9->value();
-    int final = ui->spinBox_10->value();
+    int final = ui->spinBox_8->value();
     score = (hw1+hw2+hw3+hw4+hw5)/5*0.25+0.2*mid1+0.2*mid2+0.35*final;
+
 }
 
 void grade_calculator::schemaB()
@@ -38,15 +39,18 @@ void grade_calculator::schemaB()
     int hw3 = ui->spinBox_3->value();
     int hw4 = ui->spinBox_4->value();
     int hw5 = ui->spinBox_5->value();
-    int mid1 = ui->spinBox_8->value();
+    int mid1 = ui->spinBox_10->value();
     int mid2 = ui->spinBox_9->value();
     int mid = 0;
     if (mid1 > mid2)
         mid = mid1;
     else
         mid = mid2;
-    int final = ui->spinBox_10->value();
-    score = (hw1+hw2+hw3+hw4+hw5)/5*0.25+0.3*mid+0.44*final;
+    int final = ui->spinBox_8->value();
+        score = (hw1+hw2+hw3+hw4+hw5)/5*0.25+0.3*mid+0.44*final;
+
+
+
 }
 
 void grade_calculator::display()
@@ -60,5 +64,26 @@ void grade_calculator::course(int index)
     {
         course_num = index;
     }
+    score = 0;
+    if (ui->radioButton->isChecked())
+    {
+        ui->radioButton->setAutoExclusive(false);
+        ui->radioButton->setChecked(false);
+        ui->radioButton->setAutoExclusive(true);
+    }
+    if (ui->radioButton_2->isChecked())
+    {
+        ui->radioButton_2->setAutoExclusive(false);
+        ui->radioButton_2->setChecked(false);
+        ui->radioButton_2->setAutoExclusive(true);
+    }
     ui->spinBox->setValue(0);
+    ui->spinBox_2->setValue(0);
+    ui->spinBox_3->setValue(0);
+    ui->spinBox_4->setValue(0);
+    ui->spinBox_5->setValue(0);
+    ui->spinBox_8->setValue(0);
+    ui->spinBox_9->setValue(0);
+    ui->spinBox_10->setValue(0);
+    ui->label->setText(QString::number(0));
 }
