@@ -51,7 +51,7 @@ void grade_calculator::schemaB()
 
 void grade_calculator::display()
 {
-    ui->label->setText(QString::number(course_num));
+    ui->label->setText(QString::number(score));
 }
 
 void grade_calculator::course(int index)
@@ -60,4 +60,5 @@ void grade_calculator::course(int index)
     {
         course_num = index;
     }
+    ui->spinBox->setValue(0);
 }
