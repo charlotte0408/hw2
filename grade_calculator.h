@@ -17,6 +17,7 @@ public:
 
 public slots:
     void schemaA();
+    void schemaB();
     void display();
 
 private:
