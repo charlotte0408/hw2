@@ -18,8 +18,8 @@ public:
 public slots:
     void schemaA();
     void schemaB();
-    void compute();
-    void course(int index);
+    void compute1();
+    void compute2();
 
 private:
     Ui::grade_calculator *ui;
