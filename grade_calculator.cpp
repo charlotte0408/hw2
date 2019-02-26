@@ -63,13 +63,13 @@ void grade_calculator::compute2()
     int final = ui->spinBox_24->value();
     int mid = 0;
     if (course_num == 0)
-        score = (hw1+hw2+hw3+hw4+hw5)/3*0.25+0.2*mid1+0.2*mid2+0.35*final;
+        score = (hw1+hw2+hw3+hw4+hw5)/5*0.25+0.2*mid1+0.2*mid2+0.35*final;
     else {
         if (mid1 > mid2)
             mid = mid1;
         else
             mid = mid2;
-        score = (hw1+hw2+hw3+hw4+hw5)/3*0.25+0.3*mid+0.44*final;
+        score = (hw1+hw2+hw3+hw4+hw5)/5*0.25+0.3*mid+0.44*final;
     }
-    ui->label->setText(QString::number(score));
+    ui->label_4->setText(QString::number(score));
 }
